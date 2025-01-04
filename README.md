@@ -1,5 +1,5 @@
 # PORTOFOLIO 📱
-![Logo](https://github.com/Nabil17-alt/Portofolio/tree/master/pages/img/portofolio.png)
+![Logo](https://raw.githubusercontent.com/Nabil17-alt/Portofolio/master/pages/img/portofolio.png)
 
 ## License
 
