@@ -14,6 +14,7 @@
     <a href="#home" class="scroll-top">
         <i class="bx bx-up-arrow-alt"></i>
     </a>
+
     <header>
         <div class="nav container">
             <a href="#" class="logo">Muhammad Nabil</a>
@@ -30,6 +31,7 @@
             </div>
         </div>
     </header>
+
     <section class="home container" id="home">
         <div class="home-content">
             <div class="home-img">
@@ -47,6 +49,7 @@
             </div>
         </div>
     </section>
+
     <section class="about container" id="about">
         <h2 class="heading">About</h2>
         <div class="about-content">
@@ -64,6 +67,7 @@
             </div>
         </div>
     </section>
+
     <section class="portofolio container" id="portofolio">
     <h2 class="heading">Project</h2>
     <div class="portofolio-wrapper">
@@ -73,6 +77,15 @@
                 <div class="portofolio-overlay">
                     <h2>Injureal</h2>
                     <a href="https://play.google.com/store/apps/details?id=com.capstone.injureal">
+                        <i class='bx bx-link-alt'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="portofolio-box">
+                <img src="./pages/img/storyapp2.png" alt="" class="portofolio-img">
+                <div class="portofolio-overlay">
+                    <h2>StoryApp2</h2>
+                    <a href="https://github.com/Nabil17-alt/StoryNabil2">
                         <i class='bx bx-link-alt'></i>
                     </a>
                 </div>
@@ -170,17 +183,20 @@
         </div>
     </div>
     </section>
+
     <section class="contact container" id="contact">
         <h2 class="heading">Contact</h2>
-        <form action="" class="contact-from" id="contact-from">
-            <input type="text" placeholder="Your name..." class="name" required>
-            <input type="email" name="" id="" placeholder="Email address..." class="email" required>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Write message here..." class="message" required></textarea>
+        <form action="save_contact.php" method="POST" class="contact-form" id="contact-form">
+            <input type="text" name="name" placeholder="Your name..." class="name" required>
+            <input type="email" name="email" placeholder="Email address..." class="email" required>
+            <textarea name="message" cols="30" rows="10" placeholder="Write message here..." class="message" required></textarea>
             <input type="submit" value="Send" class="send-btn">
         </form>
     </section>
+
     <section class="" id="">
     </section>
+
     <section class="footer-container">
         <div class="footer-left">
             <p class="footer-links">
@@ -192,13 +208,7 @@
             <p>&copy; Muhammad Nabil</p>
         </div>
     </section>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-        emailjs.init("wxlSalV2G6ZSGfRLu");
-        })();
-    </script>
+
     <script src="index.js"></script>
 </body>
 </html>

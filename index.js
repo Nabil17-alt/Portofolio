@@ -34,49 +34,6 @@ let words = "";
   setTimeout(ngetik, 500);
 })();
 
-function validate() {
-  let name = document.querySelector(".name");
-  let email = document.querySelector(".email");
-  let msg = document.querySelector(".message");
-  let sendBtn = document.querySelector(".send-btn");
-
-  sendBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (name.value == "" || email.value == "" || msg.value == "") {
-      emptyerror();
-    } else {
-      sendmail(name.value, email.value, msg.value);
-      success();
-    }
-  });
-}
-
-validate();
-
-function sendmail(name, email, msg) {
-  emailjs.send("service_x5omr5j", "template_595xcxk", {
-    to_name: email,
-    from_name: name,
-    message: msg,
-  });
-}
-
-function emptyerror() {
-  swal({
-    title: "Gagal Terkirim",
-    text: "Belum dikembangkan Nabil!",
-    icon: "error",
-  });
-}
-
-function success() {
-  swal({
-    title: "Gagal Terkirim",
-    text: "Belum dikembangkan Nabil!",
-    icon: "error",
-  });
-}
-
 let header = document.querySelector("header");
 window.addEventListener("scroll", () => {
   header.classList.toggle("header-active", window.scrollY > 0);
