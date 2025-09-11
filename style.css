@@ -107,12 +107,18 @@ header {
 }
 
 .home-img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     background-color: #98a7fc;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(100,123,255,0.2);
+    border: 4px solid var(--main-color);
+    transition: transform 0.3s;
+}
+.home-img:hover {
+    transform: scale(1.05) rotate(-2deg);
 }
 
 .home-text h2 {
