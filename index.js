@@ -3,51 +3,7 @@
  * Muhammad Nabil
  */
 
-// --- 1. Typing Effect Logic ---
-function initTypingEffect() {
-    const textSpan = document.querySelector('.efek-ngetik');
-    if (!textSpan) return;
 
-    const phrases = [
-        "Muhammad Nabil",
-        "an Informatics Student",
-        "a Web Developer",
-        "a Creative Problem Solver"
-    ];
-    
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let delay = 150;
-
-    function type() {
-        const currentPhrase = phrases[phraseIndex];
-        
-        if (isDeleting) {
-            textSpan.textContent = currentPhrase.substring(0, charIndex - 1);
-            charIndex--;
-            delay = 50;
-        } else {
-            textSpan.textContent = currentPhrase.substring(0, charIndex + 1);
-            charIndex++;
-            delay = 120;
-        }
-
-        if (!isDeleting && charIndex === currentPhrase.length) {
-            isDeleting = true;
-            delay = 1800; // Pause at end of phrase
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length;
-            delay = 500; // Pause before starting next phrase
-        }
-
-        setTimeout(type, delay);
-    }
-
-    // Start typewriter
-    setTimeout(type, 500);
-}
 
 // --- 2. Scroll Animations (Intersection Observer) ---
 function initScrollAnimations() {
@@ -139,19 +95,21 @@ function initMobileMenu() {
 
     menuToggle.addEventListener('click', () => {
         navbar.classList.toggle('open-menu');
-        menuToggle.classList.toggle('bx-x'); // Optionally change icon if needed
+        menuToggle.classList.toggle('active-menu');
     });
 
     // Close menu when clicking link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navbar.classList.remove('open-menu');
+            menuToggle.classList.remove('active-menu');
         });
     });
 
     // Close menu on scroll
     window.addEventListener('scroll', () => {
         navbar.classList.remove('open-menu');
+        menuToggle.classList.remove('active-menu');
     });
 }
 
@@ -383,7 +341,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initFooterYear();
     initHeaderAndScrollTop();
     initMobileMenu();
-    initTypingEffect();
+
     initScrollAnimations();
     initActiveNavOnScroll();
     initContactForm();
