@@ -234,6 +234,30 @@ header {
     border: 1px solid var(--glass-border);
 }
 
+.nav-link.mna-btn {
+    border: 1px dashed rgba(168, 85, 247, 0.5);
+    background: rgba(168, 85, 247, 0.1);
+    color: var(--text-main);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.nav-link.mna-btn i {
+    font-size: 0.95rem;
+    transition: transform 0.3s;
+}
+
+.nav-link.mna-btn:hover {
+    background: var(--primary-grad);
+    border-color: transparent;
+    box-shadow: var(--glow-shadow);
+}
+
+.nav-link.mna-btn:hover i {
+    transform: translate(2px, -2px);
+}
+
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -1325,5 +1349,267 @@ footer {
     }
     .contact-form-container {
         padding: 1.5rem 1rem;
+    }
+}
+
+/* MNA Group Promo CTA Section */
+.mna-promo {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.mna-promo-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: 3.5rem 3rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    box-shadow: var(--card-shadow);
+    backdrop-filter: blur(10px);
+}
+
+.mna-promo-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 31px;
+    background: var(--primary-grad);
+    z-index: -1;
+    opacity: 0.12;
+    transition: opacity 0.3s;
+}
+
+.mna-promo-card:hover::before {
+    opacity: 0.3;
+}
+
+.mna-promo-info {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.mna-promo-tag {
+    background: rgba(168, 85, 247, 0.1);
+    color: var(--accent-purple);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    padding: 0.4rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.mna-promo-info h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.mna-promo-info h3 span {
+    background: var(--primary-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mna-promo-info p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.mna-promo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1.1rem 2.2rem;
+    border-radius: 100px;
+    background: var(--primary-grad);
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.25);
+    white-space: nowrap;
+}
+
+.mna-promo-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+}
+
+.mna-promo-btn i {
+    font-size: 1.2rem;
+}
+
+/* Responsive CTA */
+@media (max-width: 900px) {
+    .mna-promo-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 2rem;
+        gap: 2rem;
+    }
+    .mna-promo-info {
+        max-width: 100%;
+        align-items: center;
+    }
+    .mna-promo-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* =============================================
+   PROJECTS / PORTFOLIO SECTION
+   ============================================= */
+.portofolio {
+    padding: 6rem 0;
+}
+
+.portofolio-wrapper {
+    margin-top: 3rem;
+}
+
+.portofolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.8rem;
+}
+
+/* Project Card */
+.portofolio-box {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.portofolio-box:hover {
+    transform: translateY(-6px);
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+}
+
+/* Gradient banner area */
+.portofolio-img-wrapper {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* Hover overlay with star count */
+.portofolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portofolio-box:hover .portofolio-overlay {
+    opacity: 1;
+}
+
+/* Text info area */
+.portofolio-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.6rem;
+}
+
+.portofolio-info h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-transform: capitalize;
+    line-height: 1.3;
+}
+
+.portofolio-info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* Meta bar: language dot + link */
+.portofolio-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.portofolio-lang {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.lang-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* GitHub arrow link */
+.portofolio-link {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--glass-hover);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.portofolio-link:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .portofolio-content {
+        grid-template-columns: 1fr;
+    }
+    .portofolio-img-wrapper {
+        height: 140px;
     }
 }

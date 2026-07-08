@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNA Bakers & Pastry | Coming Soon</title>
+    <link rel="shortcut icon" href="../pages/img/photome2.png" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0c0a09;
+            --bakers: #c68b59;
+            --bakers-grad: linear-gradient(135deg, #d97706 0%, #c68b59 100%);
+            --text: #fafaf9;
+            --muted: #a8a29e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg-glow {
+            position: absolute;
+            width: 40vw;
+            height: 40vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(198, 139, 89, 0.08) 0%, transparent 80%);
+            filter: blur(100px);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .icon {
+            font-size: 4.5rem;
+            background: var(--bakers-grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--bakers);
+            font-weight: 700;
+            border: 1px solid rgba(198, 139, 89, 0.3);
+            padding: 0.4rem 1.2rem;
+            border-radius: 100px;
+            background: rgba(198, 139, 89, 0.05);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        p {
+            color: var(--muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            color: var(--muted);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1.5rem;
+        }
+
+        .back-link:hover {
+            color: var(--bakers);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-glow"></div>
+    <div class="container">
+        <span class="badge">Subsidiary Unit</span>
+        <i class="bx bx-cookie icon"></i>
+        <h1>MNA Bakers & Pastry</h1>
+        <p>Premium sourdough breads, artisan pastries, specialty coffee operations, custom confectionery designs, and corporate event catering logistics are currently in setup. Launching soon.</p>
+        <a href="index.html" class="back-link"><i class="bx bx-left-arrow-alt"></i> Kembali ke MNA Group</a>
+    </div>
+</body>
+
+</html>
