@@ -5,100 +5,251 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Nabil</title>
+    <title>Muhammad Nabil | Portofolio</title>
     <link rel="shortcut icon" href="./pages/img/photome2.png" />
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <a href="#home" class="scroll-top">
+    <!-- Background Auroras -->
+    <div class="aurora-container">
+        <div class="aurora aurora-1"></div>
+        <div class="aurora aurora-2"></div>
+        <div class="aurora aurora-3"></div>
+    </div>
+
+    <!-- Scroll Top Button -->
+    <div class="scroll-top" id="scroll-top-btn">
         <i class="bx bx-up-arrow-alt"></i>
-    </a>
-    <header>
+    </div>
+
+    <!-- Floating Navigation Header -->
+    <header id="header">
         <div class="nav container">
-            <a href="#" class="logo">Muhammad Nabil</a>
+            <a href="#" class="logo"><span>Nabil</span>.Dev</a>
             <ul class="navbar">
-                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#portofolio" class="nav-link">Project</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#timeline" class="nav-link">Journey</a></li>
+                <li><a href="#portofolio" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="menu-icon">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="menu-icon" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
-    <section class="home container" id="home">
-        <div class="home-content">
-            <div class="home-img">
-                <img src="./pages/img/photome.png" alt="Profile Picture">
+
+    <!-- Hero Section -->
+    <section class="hero container" id="home">
+        <div class="hero-wrapper">
+            <div class="hero-text fade-up-element">
+                <span class="hero-tag">Available for Projects</span>
+                <h1>Designing digital solutions with <span>precision & code</span>.</h1>
+                <p>Hi, I am Muhammad Nabil, <span class="efek-ngetik" style="font-weight:600;"></span> currently studying Informatics Engineering at <span class="color-uni">Universitas Sains dan Teknologi Indonesia</span>.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Nabil17-alt" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/muhammad-nabil-377629272/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><i class="bx bxl-linkedin-square"></i></a>
+                    <a href="https://www.instagram.com/muhammadnabil_17/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+                </div>
             </div>
-            <div class="home-text">
-                <h3>Haiii</h3>
-                <h2>I am <span class="efek-ngetik"></span></h2>
-                <p>I am a student <span class="color">Universitas Sains dan Teknologi Indonesia</span></p>
-                <div class="social">
-                    <a href="https://github.com/Nabil17-alt"><i class="bx bxl-github"></i></a>
-                    <a href="https://www.linkedin.com/in/muhammad-nabil-377629272/"><i
-                            class="bx bxl-linkedin-square"></i></a>
-                    <a href="https://www.instagram.com/muhammadnabil_17/"><i class="bx bxl-instagram"></i></a>
+            <div class="hero-img-container fade-up-element" style="transition-delay: 0.2s;">
+                <div class="hero-img-wrapper">
+                    <div class="hero-img-inner">
+                        <img src="./pages/img/photome.png" alt="Muhammad Nabil Profile Picture">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="about container" id="about">
-        <h2 class="heading">About</h2>
-        <div class="about-content">
-            <div class="about-data">
-                <span>About Me</span>
-                <h2>Informatics Engineering Student</h2>
-                <a href="./pages/cv_nabil.pdf" class="btn" download>
-                    Download CV
-                    <i class="bx bxs-download"></i>
+
+    <!-- About Section -->
+    <section class="about container fade-up-element" id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Discover my drive, background, and how I view the programming universe.</p>
+        <div class="about-wrapper">
+            <div class="about-visual">
+                <h3>Creative Mind</h3>
+                <p>Translating logical structures into functional software aesthetics.</p>
+                <a href="./pages/cv_nabil.pdf" class="cv-btn" download>
+                    Download CV <i class="bx bxs-download"></i>
                 </a>
             </div>
-            <div class="about-text">
-                <p>Hi, I'm Muhammad Nabil. Informatics Engineering student.</p>
-                <p>Facing every error in coding is an interesting challenge to create a new solution. The code is the
-                    canvas, and I am the artist!!</p>
+            <div class="about-details">
+                <p>I am an <span>Informatics Engineering student</span> who treats every coding error not as a block, but as an interesting challenge to engineer a better solution. To me, code is the canvas, and I am the artist.</p>
+                <p>Always pushing the boundaries of web development and software applications, exploring newer technologies to craft premium and responsive digital products.</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">12+</div>
+                        <div class="stat-label">GitHub Repos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Learning</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <section class="portofolio container" id="portofolio">
-        <h2 class="heading">Projects</h2>
+
+    <!-- Skills Section -->
+    <section class="skills container fade-up-element" id="skills">
+        <h2 class="section-title">Skills & Toolkit</h2>
+        <p class="section-subtitle">The tools, languages, and systems I leverage to build robust digital solutions.</p>
+        <div class="skills-grid">
+            <div class="skills-category">
+                <h3><i class="bx bx-code-alt"></i> Frontend Development</h3>
+                <div class="skills-list">
+                    <span class="skill-tag"><i class="bx bxl-html5" style="color:#e34c26"></i> HTML5</span>
+                    <span class="skill-tag"><i class="bx bxl-css3" style="color:#264de4"></i> CSS3</span>
+                    <span class="skill-tag"><i class="bx bxl-javascript" style="color:#f7df1e"></i> JavaScript</span>
+                    <span class="skill-tag"><i class="bx bxl-react" style="color:#61dafb"></i> React.js</span>
+                    <span class="skill-tag"><i class="bx bxl-tailwind-css" style="color:#38bdf8"></i> TailwindCSS</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3><i class="bx bx-server"></i> Backend & Database</h3>
+                <div class="skills-list">
+                    <span class="skill-tag"><i class="bx bxl-python" style="color:#3776ab"></i> Python</span>
+                    <span class="skill-tag"><i class="bx bxl-nodejs" style="color:#339933"></i> Node.js</span>
+                    <span class="skill-tag"><i class="bx bx-data" style="color:#00758f"></i> MySQL</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3><i class="bx bx-wrench"></i> Workflow & Tools</h3>
+                <div class="skills-list">
+                    <span class="skill-tag"><i class="bx bxl-git" style="color:#f05032"></i> Git</span>
+                    <span class="skill-tag"><i class="bx bxl-github" style="color:#fff"></i> GitHub</span>
+                    <span class="skill-tag"><i class="bx bx-code-block" style="color:#007acc"></i> VS Code</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="timeline-section container fade-up-element" id="timeline">
+        <h2 class="section-title">My Journey</h2>
+        <p class="section-subtitle">A chronological walkthrough of my academic timeline and evolution as a programmer.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2024 - Present</span>
+                    <h3>Informatics Engineering</h3>
+                    <h4>Universitas Sains dan Teknologi Indonesia</h4>
+                    <p>Enrolled to dive deep into theoretical computer science, database management systems, data structures, and advanced web engineering practices.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2024</span>
+                    <h3>Open Source & Project Building</h3>
+                    <h4>GitHub Repositories</h4>
+                    <p>Began publishing projects and building active repositories. Refined knowledge of version control, code modularity, API integrations, and developer workflows.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">2023</span>
+                    <h3>Exploring Code</h3>
+                    <h4>Self-Taught Learning</h4>
+                    <p>Initiated the journey in software engineering. Practiced logic building with Python, structural styling with HTML/CSS, and interactivity using JavaScript.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="portofolio container fade-up-element" id="portofolio">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">A live dashboard of my repositories synchronized directly from my GitHub profile.</p>
         <div class="portofolio-wrapper">
-            <div class="portofolio-content" id="github-projects"></div>
+            <div class="portofolio-content" id="github-projects">
+                <!-- Fallback Loading Indicator -->
+                <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted);">
+                    <i class="bx bx-loader-alt bx-spin" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <p>Synchronizing repositories from GitHub...</p>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="contact container" id="contact">
-        <h2 class="heading">Contact</h2>
-        <form class="contact-form" id="contact-form">
-            <input type="text" name="name" placeholder="Your name..." class="name" required>
-            <input type="email" name="email" placeholder="Email address..." class="email" required>
-            <textarea name="message" cols="30" rows="10" placeholder="Write message here..." class="message"
-                required></textarea>
-            <input type="submit" value="Send" class="send-btn">
-        </form>
-        <div id="contact-log" style="margin-top:2rem">
-            <h3 style="color:#647bff;">Contact Log</h3>
-            <ul id="contact-log-list" style="color:#fff; padding-left:1rem;"></ul>
+
+    <!-- Contact Section -->
+    <section class="contact container fade-up-element" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Let's connect! Feel free to drop a message, send an email, or view my social platforms.</p>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="bx bx-envelope"></i></div>
+                    <div class="contact-details">
+                        <h4>Email Me</h4>
+                        <p><a href="mailto:realmuhammadnabil@gmail.com">realmuhammadnabil@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="bx bx-map"></i></div>
+                    <div class="contact-details">
+                        <h4>Location</h4>
+                        <p>Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Message Details..." required></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">
+                        Send Message <i class="bx bx-paper-plane"></i>
+                    </button>
+                </form>
+
+                <!-- Local Contact Log Console -->
+                <div class="contact-log-section">
+                    <div class="contact-log-header" id="contact-log-toggle">
+                        <h3><i class="bx bx-terminal"></i> Database & Logs</h3>
+                        <i class="bx bx-chevron-down"></i>
+                    </div>
+                    <div class="contact-log-content" id="contact-log-box">
+                        <div id="contact-log-list">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="footer-container">
-        <div class="footer-left">
-            <p class="footer-links">
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo"><span>Nabil</span>.Dev</div>
+            <div class="footer-links">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <a href="#portofolio">Portofolio</a>
+                <a href="#skills">Skills</a>
+                <a href="#timeline">Journey</a>
+                <a href="#portofolio">Projects</a>
                 <a href="#contact">Contact</a>
-            </p>
-            <p>&copy; Muhammad Nabil</p>
+            </div>
+            <p class="copyright">&copy; <span id="current-year"></span> Muhammad Nabil. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
+
+    <!-- App Logic Script -->
     <script src="index.js"></script>
 </body>
 
