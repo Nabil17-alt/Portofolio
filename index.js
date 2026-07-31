@@ -8,7 +8,7 @@
 // --- 2. Scroll Animations (Intersection Observer) ---
 function initScrollAnimations() {
     const fadeElements = document.querySelectorAll('.fade-up-element');
-    
+
     const observerOptions = {
         root: null,
         threshold: 0.15,
@@ -158,13 +158,13 @@ async function loadGitHubProjects() {
 
     try {
         const res = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=12`);
-        
+
         if (!res.ok) {
             throw new Error('API request failed');
         }
 
         const repos = await res.json();
-        
+
         // Filter out forks
         const ownRepos = repos.filter(repo => !repo.fork);
 
@@ -195,7 +195,7 @@ function renderProjectCard(container, repo) {
     const lang = repo.language ? repo.language : 'Code';
     const langLower = lang.toLowerCase();
     const dotColor = LANGUAGE_COLORS[langLower] || '#818cf8';
-    
+
     // Generate static visual gradient theme based on project name length to look premium
     const gradIndex = (repo.name.length % 5) + 1;
     const gradients = [
@@ -271,7 +271,7 @@ function renderContactLog() {
 }
 
 function escapeHTML(str) {
-    return str.replace(/[&<>'"]/g, 
+    return str.replace(/[&<>'"]/g,
         tag => ({
             '&': '&amp;',
             '<': '&lt;',
@@ -309,7 +309,7 @@ function initContactForm() {
         localStorage.setItem('contact_log', JSON.stringify(logs));
         contactForm.reset();
         renderContactLog();
-        
+
         // Show stylish modal or notification
         alert(`Thank you, ${name}! Your message has been logged to the Local Console successfully.`);
     });
