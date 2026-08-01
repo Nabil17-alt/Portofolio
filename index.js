@@ -1,25 +1,91 @@
 /**
- * Personal Portfolio App Logic
- * Muhammad Nabil
+ * Portofolio Aplikasi Web & Mobile - Application Logic
+ * Muhammad Nabil, S.Kom
  */
 
+// --- 1. Top Scroll Progress Bar ---
+function initScrollProgressBar() {
+    const progressBar = document.getElementById('scroll-bar');
+    if (!progressBar) return;
 
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = `${scrollPercent}%`;
+    });
+}
 
-// --- 2. Scroll Animations (Intersection Observer) ---
+// --- 2. Hero Section Typing Effect ---
+function initTypingEffect() {
+    const typingTextEl = document.getElementById('typing-text');
+    if (!typingTextEl) return;
+
+    const roles = [
+        "Software Engineer",
+        "Laravel Developer",
+        "Android Developer",
+        "IT Specialist"
+    ];
+
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+
+    function type() {
+        const currentRole = roles[roleIndex];
+
+        if (isDeleting) {
+            typingTextEl.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = 50;
+        } else {
+            typingTextEl.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 100;
+        }
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            typingSpeed = 2000; // Pause at end
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            typingSpeed = 500; // Pause before new word
+        }
+
+        setTimeout(type, typingSpeed);
+    }
+
+    type();
+}
+
+// --- 3. Scroll Reveal & Skill Progress Fill Observer ---
 function initScrollAnimations() {
     const fadeElements = document.querySelectorAll('.fade-up-element');
 
     const observerOptions = {
         root: null,
         threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
+        rootMargin: "0px 0px -40px 0px"
     };
 
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('element-visible');
-                // Unobserve once animated
+
+                // Trigger skill progress bar animations when skills section appears
+                const skillFills = entry.target.querySelectorAll('.skill-progress-fill');
+                skillFills.forEach(fill => {
+                    const targetWidth = fill.style.width;
+                    fill.style.width = '0%';
+                    setTimeout(() => {
+                        fill.style.width = targetWidth;
+                    }, 100);
+                });
+
                 obs.unobserve(entry.target);
             }
         });
@@ -30,14 +96,14 @@ function initScrollAnimations() {
     });
 }
 
-// --- 3. Dynamic Active Navigation Indicator on Scroll ---
+// --- 4. Active Navigation Indicator on Scroll ---
 function initActiveNavOnScroll() {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
     window.addEventListener('scroll', () => {
         let currentSectionId = '';
-        const scrollPosition = window.scrollY + 200; // Offset for header
+        const scrollPosition = window.scrollY + 220;
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
@@ -56,20 +122,18 @@ function initActiveNavOnScroll() {
     });
 }
 
-// --- 4. Sticky Header & Back to Top Toggle ---
+// --- 5. Sticky Header & Back To Top Handler ---
 function initHeaderAndScrollTop() {
     const header = document.getElementById('header');
     const scrollTopBtn = document.getElementById('scroll-top-btn');
 
     window.addEventListener('scroll', () => {
-        // Header Sticky state
         if (window.scrollY > 50) {
             header.classList.add('sticky');
         } else {
             header.classList.remove('sticky');
         }
 
-        // Scroll Top Button active state
         if (window.scrollY > 400) {
             scrollTopBtn.classList.add('scroll-active');
         } else {
@@ -85,7 +149,7 @@ function initHeaderAndScrollTop() {
     });
 }
 
-// --- 5. Mobile Navigation Menu Toggle ---
+// --- 6. Mobile Navigation Menu Toggle ---
 function initMobileMenu() {
     const menuToggle = document.getElementById('menu-toggle');
     const navbar = document.querySelector('.navbar');
@@ -98,7 +162,6 @@ function initMobileMenu() {
         menuToggle.classList.toggle('active-menu');
     });
 
-    // Close menu when clicking link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navbar.classList.remove('open-menu');
@@ -106,14 +169,13 @@ function initMobileMenu() {
         });
     });
 
-    // Close menu on scroll
     window.addEventListener('scroll', () => {
         navbar.classList.remove('open-menu');
         menuToggle.classList.remove('active-menu');
     });
 }
 
-// --- 6. GitHub Repositories Fetcher & Dynamic Renderer ---
+// --- 7. GitHub Projects Synchronizer & Fallback ---
 const LANGUAGE_COLORS = {
     javascript: '#f1e05a',
     html: '#e34c26',
@@ -121,35 +183,9 @@ const LANGUAGE_COLORS = {
     python: '#3572A5',
     typescript: '#3178c6',
     php: '#4f5d95',
-    vue: '#41b883',
-    react: '#61dafb',
-    java: '#b07219',
-    go: '#00ADD8'
+    kotlin: '#7f52ff',
+    java: '#b07219'
 };
-
-const MOCK_REPOSITORIES = [
-    {
-        name: 'Informatics-Portal',
-        description: 'A comprehensive academic dashboard developed for informatics students to coordinate database files and project workflows.',
-        html_url: 'https://github.com/Nabil17-alt/Informatics-Portal',
-        language: 'JavaScript',
-        stargazers_count: 5
-    },
-    {
-        name: 'Smart-Inventory-System',
-        description: 'An automated supply and inventory tracking application built using Python, SQLite, and customized responsive UI interfaces.',
-        html_url: 'https://github.com/Nabil17-alt/Smart-Inventory-System',
-        language: 'Python',
-        stargazers_count: 3
-    },
-    {
-        name: 'Advanced-Portfolio-Redesign',
-        description: 'A professional and premium space-themed portfolio featuring glassmorphic designs, responsive animations, and integration interfaces.',
-        html_url: 'https://github.com/Nabil17-alt/Portofolio',
-        language: 'CSS',
-        stargazers_count: 4
-    }
-];
 
 async function loadGitHubProjects() {
     const username = 'Nabil17-alt';
@@ -157,78 +193,57 @@ async function loadGitHubProjects() {
     if (!container) return;
 
     try {
-        const res = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=12`);
+        const res = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
 
-        if (!res.ok) {
-            throw new Error('API request failed');
-        }
+        if (!res.ok) throw new Error('Permintaan API GitHub gagal');
 
         const repos = await res.json();
+        const ownRepos = repos.filter(repo => !repo.fork && !['PTPN4Regional3', 'INJUREAL', 'Skripsi-Muhammad-Nabil'].includes(repo.name));
 
-        // Filter out forks
-        const ownRepos = repos.filter(repo => !repo.fork);
-
-        if (ownRepos.length === 0) {
-            renderMockProjects(container);
-            return;
-        }
+        if (ownRepos.length === 0) return;
 
         container.innerHTML = '';
         ownRepos.forEach(repo => {
-            renderProjectCard(container, repo);
+            renderDynamicRepoCard(container, repo);
         });
 
     } catch (e) {
-        console.warn('Unable to load GitHub repositories. Loading premium mock projects instead.', e);
-        renderMockProjects(container);
+        console.warn('Menggunakan data proyek utama lokal.', e);
     }
 }
 
-function renderMockProjects(container) {
-    container.innerHTML = '';
-    MOCK_REPOSITORIES.forEach(repo => {
-        renderProjectCard(container, repo);
-    });
-}
-
-function renderProjectCard(container, repo) {
-    const lang = repo.language ? repo.language : 'Code';
+function renderDynamicRepoCard(container, repo) {
+    const lang = repo.language ? repo.language : 'Kode';
     const langLower = lang.toLowerCase();
-    const dotColor = LANGUAGE_COLORS[langLower] || '#818cf8';
-
-    // Generate static visual gradient theme based on project name length to look premium
-    const gradIndex = (repo.name.length % 5) + 1;
-    const gradients = [
-        'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-        'linear-gradient(135deg, #a855f7, #ec4899)',
-        'linear-gradient(135deg, #06b6d4, #3b82f6)',
-        'linear-gradient(135deg, #10b981, #059669)',
-        'linear-gradient(135deg, #f59e0b, #e11d48)'
-    ];
-    const cardGrad = gradients[gradIndex - 1];
+    const dotColor = LANGUAGE_COLORS[langLower] || '#6366f1';
 
     const html = `
-        <div class="portofolio-box">
-            <div class="portofolio-img-wrapper" style="background: ${cardGrad};">
-                <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; opacity:0.15;">
-                    <i class="bx bx-code-block" style="font-size: 5rem; color:#fff;"></i>
+        <div class="project-card fade-up-element element-visible">
+            <div class="project-img-box">
+                <div class="project-gradient-bg" style="background: linear-gradient(135deg, #1e293b, #334155);">
+                    <i class="bx bx-code-block project-icon-preview"></i>
                 </div>
-                <div class="portofolio-overlay">
-                    <span style="color:#fff; font-size: 0.85rem; font-weight:600; background:rgba(0,0,0,0.4); padding:0.4rem 1rem; border-radius:100px; border:1px solid rgba(255,255,255,0.1); margin-bottom: 0.5rem;">
-                        <i class="bx bx-star"></i> Stars: ${repo.stargazers_count || 0}
-                    </span>
-                </div>
+                <span class="project-status-badge status-completed">GitHub Repo</span>
             </div>
-            <div class="portofolio-info">
-                <h2>${repo.name.replace(/-/g, ' ')}</h2>
-                <p>${repo.description ? repo.description : 'No description provided. Click the link to explore the source code repository on GitHub.'}</p>
-                <div class="portofolio-meta">
-                    <div class="portofolio-lang">
-                        <span class="lang-dot" style="background-color: ${dotColor};"></span>
-                        <span>${lang}</span>
+            <div class="project-body">
+                <div>
+                    <div class="project-header-row">
+                        <h3 class="project-title">${escapeHTML(repo.name.replace(/-/g, ' '))}</h3>
                     </div>
-                    <a href="${repo.html_url}" target="_blank" rel="noopener" class="portofolio-link" aria-label="View Project Source Code">
-                        <i class="bx bx-arrow-to-right"></i>
+                    <p class="project-desc">${repo.description ? escapeHTML(repo.description) : 'Repositori kode publik pada profil GitHub Muhammad Nabil.'}</p>
+                    
+                    <div class="project-tech-tags">
+                        <span class="tech-tag" style="border-color:${dotColor}; color:#fff;">
+                            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:${dotColor}; margin-right:4px;"></span>
+                            ${lang}
+                        </span>
+                        <span class="tech-tag"><i class="bx bx-star"></i> ${repo.stargazers_count || 0} Stars</span>
+                    </div>
+                </div>
+
+                <div class="project-footer-row">
+                    <a href="${repo.html_url}" target="_blank" rel="noopener" class="project-link-btn">
+                        <i class="bx bxl-github"></i> Lihat Repository <i class="bx bx-right-arrow-alt"></i>
                     </a>
                 </div>
             </div>
@@ -237,7 +252,7 @@ function renderProjectCard(container, repo) {
     container.insertAdjacentHTML('beforeend', html);
 }
 
-// --- 7. Local Contact Logger Database Logic ---
+// --- 8. Contact Form Local Database Storage Logger ---
 function renderContactLog() {
     const logList = document.getElementById('contact-log-list');
     if (!logList) return;
@@ -247,30 +262,29 @@ function renderContactLog() {
 
     if (logs.length === 0) {
         logList.innerHTML = `
-            <div style="color: var(--text-muted); font-size:0.85rem; text-align:center; padding: 1.5rem 0;">
-                <i class="bx bx-data" style="font-size: 1.8rem; display:block; margin-bottom: 0.3rem;"></i>
-                No contact submissions found in LocalStorage.
+            <div style="color: var(--text-muted); font-size:0.85rem; text-align:center; padding: 1rem 0;">
+                <i class="bx bx-data" style="font-size: 1.5rem; display:block; margin-bottom: 0.3rem; color:var(--primary);"></i>
+                Belum ada pesan yang tersimpan di Database Log Lokal.
             </div>
         `;
         return;
     }
 
-    // Display logs sorted from newest
     logs.slice().reverse().forEach(item => {
         const itemEl = document.createElement('div');
         itemEl.className = 'contact-log-item';
         itemEl.innerHTML = `
             <div class="contact-log-meta">
-                <span class="contact-log-name">${escapeHTML(item.name)} &lt;${escapeHTML(item.email)}&gt;</span>
-                <span>${item.time}</span>
+                <strong>${escapeHTML(item.name)}</strong> &lt;${escapeHTML(item.email)}&gt; • <span>${item.time}</span>
             </div>
-            <div class="contact-log-message">${escapeHTML(item.message)}</div>
+            <div>"${escapeHTML(item.message)}"</div>
         `;
         logList.appendChild(itemEl);
     });
 }
 
 function escapeHTML(str) {
+    if (!str) return '';
     return str.replace(/[&<>'"]/g,
         tag => ({
             '&': '&amp;',
@@ -303,18 +317,16 @@ function initContactForm() {
             name,
             email,
             message,
-            time: new Date().toLocaleString()
+            time: new Date().toLocaleString('id-ID')
         });
 
         localStorage.setItem('contact_log', JSON.stringify(logs));
         contactForm.reset();
         renderContactLog();
 
-        // Show stylish modal or notification
-        alert(`Thank you, ${name}! Your message has been logged to the Local Console successfully.`);
+        alert(`Terima kasih, ${name}! Pesan Anda telah berhasil dicatat pada Database Log Lokal.`);
     });
 
-    // Toggle contact log display
     const logToggle = document.getElementById('contact-log-toggle');
     const logBox = document.getElementById('contact-log-box');
 
@@ -328,7 +340,7 @@ function initContactForm() {
     renderContactLog();
 }
 
-// --- 8. Dynamic Copyright Year ---
+// --- 9. Dynamic Copyright Year ---
 function initFooterYear() {
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
@@ -338,6 +350,8 @@ function initFooterYear() {
 
 // --- DOM Initialization ---
 window.addEventListener('DOMContentLoaded', () => {
+    initScrollProgressBar();
+    initTypingEffect();
     initFooterYear();
     initHeaderAndScrollTop();
     initMobileMenu();

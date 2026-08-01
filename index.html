@@ -1,42 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Nabil | Portofolio</title>
-    <link rel="shortcut icon" href="./pages/img/photome2.png" />
+
+    <!-- SEO Meta Tags -->
+    <title>Muhammad Nabil | Software Engineer, Laravel & Android Developer</title>
+    <meta name="description"
+        content="Portofolio Profesional Muhammad Nabil - Software Engineer, Laravel Developer, & Android Developer. Lulusan S1 Teknik Informatika USTI Pekanbaru dengan IPK 3.72/4.00, berpengalaman di PTPN IV Regional III dan Bangkit Academy.">
+    <meta name="keywords"
+        content="Muhammad Nabil, Muhammad Nabil, Software Engineer, Laravel Developer, Android Developer, Web Developer Pekanbaru, Bangkit Academy, PTPN IV Regional III, Portofolio IT">
+    <meta name="author" content="Muhammad Nabil">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nabil17-alt.github.io/Portofolio/" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nabil17-alt.github.io/Portofolio/">
+    <meta property="og:title" content="Muhammad Nabil | Software Engineer & Developer">
+    <meta property="og:description"
+        content="Portofolio profesional Muhammad Nabil - Software Engineer, Laravel Developer, dan Android Developer lulusan USTI (IPK 3.72/4.00).">
+    <meta property="og:image" content="./pages/img/Muhammad_Nabil.png">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://nabil17-alt.github.io/Portofolio/">
+    <meta name="twitter:title" content="Muhammad Nabil | Software Engineer & Developer">
+    <meta name="twitter:description"
+        content="Portofolio profesional Software Engineer, Laravel & Android Developer. Lulusan S1 Teknik Informatika IPK 3.72.">
+    <meta name="twitter:image" content="./pages/img/Muhammad_Nabil.png">
+
+    <!-- Favicon & Stylesheets -->
+    <link rel="shortcut icon" href="./pages/img/Muhammad_Nabil2.png" type="image/png" />
     <link rel="stylesheet" href="index.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Schema.org Person Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Muhammad Nabil",
+      "honorificSuffix": "S.Kom",
+      "jobTitle": "Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "PT Perkebunan Nusantara IV Regional III"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Universitas Sains dan Teknologi Indonesia (USTI)"
+      },
+      "url": "https://nabil17-alt.github.io/Portofolio/",
+      "sameAs": [
+        "https://github.com/Nabil17-alt",
+        "https://www.linkedin.com/in/muhammad-nabil-377629272/",
+        "https://www.instagram.com/muhammadnabil_17/"
+      ],
+      "knowsAbout": [
+        "Software Engineering",
+        "Laravel",
+        "PHP",
+        "Android Development",
+        "Kotlin",
+        "MySQL",
+        "REST API",
+        "IT Support"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pekanbaru",
+        "addressRegion": "Riau",
+        "addressCountry": "ID"
+      }
+    }
+    </script>
 </head>
 
 <body>
-    <!-- Background Auroras -->
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-bar"></div>
+    </div>
+
+    <!-- Background Aurora Effect -->
     <div class="aurora-container">
         <div class="aurora aurora-1"></div>
         <div class="aurora aurora-2"></div>
         <div class="aurora aurora-3"></div>
     </div>
 
-    <!-- Scroll Top Button -->
-    <div class="scroll-top" id="scroll-top-btn">
+    <!-- Scroll To Top Button -->
+    <div class="scroll-top" id="scroll-top-btn" aria-label="Kembali ke atas">
         <i class="bx bx-up-arrow-alt"></i>
     </div>
 
     <!-- Floating Navigation Header -->
     <header id="header">
         <div class="nav container">
-            <a href="#" class="logo"><span>Nabil</span>.Dev</a>
+            <a href="#home" class="logo"><span>Nabil</span>.Dev</a>
             <ul class="navbar">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#timeline" class="nav-link">Journey</a></li>
-                <li><a href="#portofolio" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link active">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+                <li><a href="#summary" class="nav-link">Ringkasan</a></li>
+                <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+                <li><a href="#projects" class="nav-link">Proyek</a></li>
+                <li><a href="#certifications" class="nav-link">Sertifikasi</a></li>
+                <li><a href="#stats" class="nav-link">Statistik</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
             </ul>
-            <div class="menu-icon" id="menu-toggle">
+            <div class="menu-icon" id="menu-toggle" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -44,228 +121,818 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero container" id="home">
-        <div class="hero-wrapper">
-            <div class="hero-text fade-up-element">
-                <span class="hero-tag">Available for Projects</span>
-                <h1>Designing digital solutions with <span>precision & code</span>.</h1>
-                <p>Hi, I am Muhammad Nabil. I am a passionate <span
-                        style="color: var(--primary); font-weight: 600;">Software Engineer and Web Developer</span> with
-                    a degree of <span style="font-weight: 600;">Computer (S.Kom)</span> in Informatics Engineering from
-                    <span class="color-uni">Universitas Sains dan Teknologi Indonesia</span>.</p>
-                <div class="social-links">
-                    <a href="https://github.com/Nabil17-alt" target="_blank" rel="noopener" class="social-btn"
-                        aria-label="GitHub"><i class="bx bxl-github"></i></a>
-                    <a href="https://www.linkedin.com/in/muhammad-nabil-377629272/" target="_blank" rel="noopener"
-                        class="social-btn" aria-label="LinkedIn"><i class="bx bxl-linkedin-square"></i></a>
-                    <a href="https://www.instagram.com/muhammadnabil_17/" target="_blank" rel="noopener"
-                        class="social-btn" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
-                </div>
-            </div>
-            <div class="hero-img-container fade-up-element" style="transition-delay: 0.2s;">
-                <div class="hero-img-wrapper">
-                    <div class="hero-img-inner">
-                        <img src="./pages/img/photome.png" alt="Muhammad Nabil Profile Picture">
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="hero container" id="home">
+            <div class="hero-wrapper">
+                <div class="hero-text fade-up-element">
+                    <div class="hero-tag">
+                        <span class="hero-tag-dot"></span>
+                        Tersedia untuk Peluang Kerja & Proyek
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <h1>Muhammad Nabil</h1>
+                    <div class="typing-container">
+                        <span id="typing-text"></span>
+                        <span class="typing-cursor"></span>
+                    </div>
+                    <p class="hero-desc">
+                        Lulusan S1 Teknik Informatika yang berfokus pada pengembangan aplikasi web, aplikasi Android, dan solusi perangkat lunak yang membantu menyelesaikan permasalahan bisnis melalui teknologi.
+                    </p>
 
-    <!-- About Section -->
-    <section class="about container fade-up-element" id="about">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Discover my drive, background, and how I view the programming universe.</p>
-        <div class="about-wrapper">
-            <div class="about-visual">
-                <h3>Creative Mind</h3>
-                <p>Translating logical structures into functional software aesthetics.</p>
-                <a href="./pages/CV_Muhammad_Nabil.pdf" class="cv-btn" download>
-                    Download CV <i class="bx bxs-download"></i>
-                </a>
-            </div>
-            <div class="about-details">
-                <p>I am an <span>Informatics Engineering graduate, holding a Bachelor of Computer (S.Kom) degree</span>,
-                    who treats every coding error not as a block, but as an interesting challenge to engineer a better
-                    solution. To me, code is the canvas, and I am the artist.</p>
-                <p>Always pushing the boundaries of web development and software applications, exploring newer
-                    technologies to craft premium and responsive digital products.</p>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">12+</div>
-                        <div class="stat-label">GitHub Repos</div>
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta-group">
+                        <a href="./pages/CV_Muhammad_Nabil.pdf" class="btn btn-primary" download>
+                            <i class="bx bxs-download"></i> Download CV
+                        </a>
+                        <a href="https://github.com/Nabil17-alt" target="_blank" rel="noopener" class="btn btn-secondary">
+                            <i class="bx bxl-github"></i> Lihat GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-nabil-377629272/" target="_blank" rel="noopener" class="btn btn-outline">
+                            <i class="bx bxl-linkedin-square"></i> LinkedIn
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="bx bx-envelope"></i> Hubungi Saya
+                        </a>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">3+</div>
-                        <div class="stat-label">Years Learning</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="skills container fade-up-element" id="skills">
-        <h2 class="section-title">Skills & Toolkit</h2>
-        <p class="section-subtitle">The tools, languages, and systems I leverage to build robust digital solutions.</p>
-        <div class="skills-grid">
-            <div class="skills-category">
-                <h3><i class="bx bx-code-alt"></i> Frontend Development</h3>
-                <div class="skills-list">
-                    <span class="skill-tag"><i class="bx bxl-html5" style="color:#e34c26"></i> HTML5</span>
-                    <span class="skill-tag"><i class="bx bxl-css3" style="color:#264de4"></i> CSS3</span>
-                    <span class="skill-tag"><i class="bx bxl-javascript" style="color:#f7df1e"></i> JavaScript</span>
-                    <span class="skill-tag"><i class="bx bxl-react" style="color:#61dafb"></i> React.js</span>
-                    <span class="skill-tag"><i class="bx bxl-tailwind-css" style="color:#38bdf8"></i> TailwindCSS</span>
+                    <!-- Social Icons -->
+                    <div class="hero-socials">
+                        <a href="https://github.com/Nabil17-alt" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muhammad-nabil-377629272/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><i class="bx bxl-linkedin-square"></i></a>
+                        <a href="https://www.instagram.com/muhammadnabil_17/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div class="skills-category">
-                <h3><i class="bx bx-server"></i> Backend & Database</h3>
-                <div class="skills-list">
-                    <span class="skill-tag"><i class="bx bxl-python" style="color:#3776ab"></i> Python</span>
-                    <span class="skill-tag"><i class="bx bxl-nodejs" style="color:#339933"></i> Node.js</span>
-                    <span class="skill-tag"><i class="bx bx-data" style="color:#00758f"></i> MySQL</span>
-                </div>
-            </div>
-            <div class="skills-category">
-                <h3><i class="bx bx-wrench"></i> Workflow & Tools</h3>
-                <div class="skills-list">
-                    <span class="skill-tag"><i class="bx bxl-git" style="color:#f05032"></i> Git</span>
-                    <span class="skill-tag"><i class="bx bxl-github" style="color:#fff"></i> GitHub</span>
-                    <span class="skill-tag"><i class="bx bx-code-block" style="color:#007acc"></i> VS Code</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Journey Section -->
-    <section class="timeline-section container fade-up-element" id="timeline">
-        <h2 class="section-title">My Journey</h2>
-        <p class="section-subtitle">A chronological walkthrough of my academic timeline and evolution as a programmer.
-        </p>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">2020 - 2024 (Graduated)</span>
-                    <h3>Bachelor of Computer (S.Kom)</h3>
-                    <h4>Universitas Sains dan Teknologi Indonesia</h4>
-                    <p>Successfully completed degree in Informatics Engineering. Studied theoretical computer science,
-                        software engineering, databases, and advanced web architecture.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">2024</span>
-                    <h3>Open Source & Project Building</h3>
-                    <h4>GitHub Repositories</h4>
-                    <p>Began publishing projects and building active repositories. Refined knowledge of version control,
-                        code modularity, API integrations, and developer workflows.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">2023</span>
-                    <h3>Exploring Code</h3>
-                    <h4>Self-Taught Learning</h4>
-                    <p>Initiated the journey in software engineering. Practiced logic building with Python, structural
-                        styling with HTML/CSS, and interactivity using JavaScript.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="portofolio container fade-up-element" id="portofolio">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle">A live dashboard of my repositories synchronized directly from my GitHub profile.
-        </p>
-        <div class="portofolio-wrapper">
-            <div class="portofolio-content" id="github-projects">
-                <!-- Fallback Loading Indicator -->
-                <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted);">
-                    <i class="bx bx-loader-alt bx-spin"
-                        style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                    <p>Synchronizing repositories from GitHub...</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact container fade-up-element" id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Let's connect! Feel free to drop a message, send an email, or view my social
-            platforms.</p>
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <div class="contact-card">
-                    <div class="contact-icon"><i class="bx bx-envelope"></i></div>
-                    <div class="contact-details">
-                        <h4>Email Me</h4>
-                        <p><a href="mailto:realmuhammadnabil@gmail.com">realmuhammadnabil@gmail.com</a></p>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon"><i class="bx bx-map"></i></div>
-                    <div class="contact-details">
-                        <h4>Location</h4>
-                        <p>Indonesia</p>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form-container">
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Message Details..." required></textarea>
-                    </div>
-                    <button type="submit" class="send-btn">
-                        Send Message <i class="bx bx-paper-plane"></i>
-                    </button>
-                </form>
-
-                <!-- Local Contact Log Console -->
-                <div class="contact-log-section">
-                    <div class="contact-log-header" id="contact-log-toggle">
-                        <h3><i class="bx bx-terminal"></i> Database & Logs</h3>
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                    <div class="contact-log-content" id="contact-log-box">
-                        <div id="contact-log-list">
-                            <!-- Populated dynamically -->
+                <div class="hero-img-container fade-up-element">
+                    <div class="hero-img-wrapper">
+                        <div class="hero-img-inner">
+                            <img src="./pages/img/Muhammad_Nabil.png" alt="Foto Profil Muhammad Nabil" loading="lazy">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer Section -->
+            <!-- Professional Summary Cards (Below Hero) -->
+            <div class="hero-summary-cards fade-up-element">
+                <div class="summary-card">
+                    <div class="summary-icon"><i class="bx bxs-graduation"></i></div>
+                    <div class="summary-content">
+                        <h4>3.72 / 4.00</h4>
+                        <p>IPK Transkrip S1 USTI</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon"><i class="bx bxs-briefcase"></i></div>
+                    <div class="summary-content">
+                        <h4>1 Pengalaman</h4>
+                        <p>Magang Industri PTPN IV</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon"><i class="bx bxs-rocket"></i></div>
+                    <div class="summary-content">
+                        <h4>3+ Proyek Besar</h4>
+                        <p>Laravel & Android Apps</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon"><i class="bx bxs-award"></i></div>
+                    <div class="summary-content">
+                        <h4>5 Sertifikasi</h4>
+                        <p>Dicoding & Oracle</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Tentang Saya Section -->
+        <section class="about container fade-up-element" id="about">
+            <div class="section-header">
+                <span class="section-tag">Tentang Saya</span>
+                <h2 class="section-title">Latar Belakang & <span>Visi Profesional</span></h2>
+                <p class="section-subtitle">
+                    Perjalanan akademis, nilai-nilai kerja, dan filosofi dalam memecahkan masalah melalui kode.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div>
+                        <div class="about-card-title">
+                            <i class="bx bx-user-pin"></i> Profil Singkat
+                        </div>
+                        <p>
+                            Saya adalah lulusan <strong>Sarjana Teknik Informatika (S.Kom)</strong> dari Universitas Sains dan Teknologi Indonesia (USTI) dengan IPK 3,72 / 4,00. Berfokus pada pengembangan aplikasi web berbasis Laravel dan aplikasi mobile Android native dengan Kotlin.
+                        </p>
+                        <p>
+                            Memiliki pengalaman nyata dalam mengembangkan Sistem Informasi Manajemen Pembelian CPO & PK di PT Perkebunan Nusantara IV Regional III serta mengikuti program studi independen Android Development di Bangkit Academy (MSIB).
+                        </p>
+                    </div>
+
+                    <div class="vision-box">
+                        <h4>Visi Profesional</h4>
+                        <p>"Saya percaya bahwa perangkat lunak yang baik bukan hanya berjalan dengan benar, tetapi juga memberikan solusi yang berdampak nyata bagi pengguna dan bisnis."</p>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-card-title">
+                        <i class="bx bx-check-shield"></i> Keunggulan Utama
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="bx bx-code-alt"></i></div>
+                            <div class="highlight-text">
+                                <h5>Pemrograman Clean Code</h5>
+                                <p>Menulis kode modular, terstruktur, dan dapat dipelihara sesuai standar arsitektur industri.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="bx bx-devices"></i></div>
+                            <div class="highlight-text">
+                                <h5>Multi-Platform Competency</h5>
+                                <p>Menguasai ekosistem backend Laravel PHP dan Android Native Kotlin secara menyeluruh.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon"><i class="bx bx-wrench"></i></div>
+                            <div class="highlight-text">
+                                <h5>Troubleshooting & Analytical Mindset</h5>
+                                <p>Terbiasa menangani tantangan debugging, optimalisasi query, dan konfigurasi perangkat IT.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Ringkasan Profesional Section -->
+        <section class="summary-section container fade-up-element" id="summary">
+            <div class="section-header">
+                <span class="section-tag">Ringkasan</span>
+                <h2 class="section-title">Kompetensi <span>Utama</span></h2>
+                <p class="section-subtitle">
+                    Rangkuman bidang keahlian utama yang siap memberikan nilai tambah bagi tim engineering perusahaan.
+                </p>
+            </div>
+
+            <div class="summary-grid">
+                <div class="prof-summary-box">
+                    <div class="prof-icon-badge"><i class="bx bx-layer"></i></div>
+                    <h3>Full Stack Web Development</h3>
+                    <p>
+                        Pengembangan aplikasi web berbasis <strong>Laravel (MVC)</strong>, integrasi Blade, Tailwind CSS, MySQL, RESTful API, autentikasi multi-role, dan pengujian sistem.
+                    </p>
+                </div>
+                <div class="prof-summary-box">
+                    <div class="prof-icon-badge"><i class="bx bxl-android"></i></div>
+                    <h3>Android Mobile Development</h3>
+                    <p>
+                        Perancangan antarmuka pengguna Android native menggunakan <strong>Kotlin & Android Studio</strong>, integrasi REST API (Retrofit), dan manajemen basis data lokal.
+                    </p>
+                </div>
+                <div class="prof-summary-box">
+                    <div class="prof-icon-badge"><i class="bx bx-cog"></i></div>
+                    <h3>IT Support & Infrastructure</h3>
+                    <p>
+                        Troubleshooting hardware & software, instalasi sistem operasi, konfigurasi perangkat jaringan dasar, serta pemeliharaan lingkungan kerja IT.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Keahlian Section -->
+        <section class="skills container fade-up-element" id="skills">
+            <div class="section-header">
+                <span class="section-tag">Keahlian</span>
+                <h2 class="section-title">Teknologi & <span>Toolkit Yang Dikuasai</span></h2>
+                <p class="section-subtitle">
+                    Pengelompokan bahasa pemrograman, framework, basis data, dan alat pengembangan software.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Bahasa Pemrograman -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="bx bx-code-curly"></i>
+                        <h3>Bahasa Pemrograman</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bxl-php" style="color:#777bb4"></i> PHP</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bxl-javascript" style="color:#f7df1e"></i> JavaScript</span>
+                                <span class="skill-level-text">Menengah</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 82%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-mobile-alt" style="color:#7f52ff"></i> Kotlin</span>
+                                <span class="skill-level-text">Menengah</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-data" style="color:#00758f"></i> SQL</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bxl-html5" style="color:#e34c26"></i> HTML5 / CSS3</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="bx bx-server"></i>
+                        <h3>Backend & Web</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bxl-laravel" style="color:#ff2d20"></i> Laravel</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-link-external" style="color:#38bdf8"></i> REST API</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bxs-file-code" style="color:#f05340"></i> Blade Template</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bxl-tailwind-css" style="color:#38bdf8"></i> Tailwind CSS</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Development -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="bx bxl-android"></i>
+                        <h3>Mobile Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bxl-android" style="color:#3ddc84"></i> Android Studio</span>
+                                <span class="skill-level-text">Menengah</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 82%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-transfer" style="color:#6366f1"></i> Retrofit & API Integration</span>
+                                <span class="skill-level-text">Menengah</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-devices" style="color:#10b981"></i> Responsive Layout & UI</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="bx bx-line-chart"></i>
+                        <h3>Database Management</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-data" style="color:#00758f"></i> MySQL</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-sitemap" style="color:#8b5cf6"></i> Relational DB & CRUD</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="bx bx-wrench"></i>
+                        <h3>Tools & Workflow</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bxl-git" style="color:#f05032"></i> Git & GitHub</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-send" style="color:#ff6c37"></i> Postman API</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-code-block" style="color:#007acc"></i> VS Code</span>
+                                <span class="skill-level-text">Lanjutan</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IT Support -->
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="bx bx-support"></i>
+                        <h3>IT Support & Infrastructure</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-chip" style="color:#10b981"></i> Hardware Troubleshooting</span>
+                                <span class="skill-level-text">Teruji</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-desktop" style="color:#06b6d4"></i> Software & OS Installation</span>
+                                <span class="skill-level-text">Teruji</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="skill-item-row">
+                            <div class="skill-label-group">
+                                <span class="skill-name"><i class="bx bx-wifi" style="color:#f59e0b"></i> Basic Networking & Config</span>
+                                <span class="skill-level-text">Teruji</span>
+                            </div>
+                            <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 80%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Pengalaman Section -->
+        <section class="timeline-section container fade-up-element" id="experience">
+            <div class="section-header">
+                <span class="section-tag">Pengalaman</span>
+                <h2 class="section-title">Pengalaman Industri & <span>Perjalanan Karir</span></h2>
+                <p class="section-subtitle">
+                    Linimasa pengalaman kerja magang, pelatihan profesional, pengalaman organisasi, dan pendidikan formal.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <!-- 1. Pendidikan USTI -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-badge">Pendidikan Formal</span>
+                            <span class="timeline-date">2022 – 2026</span>
+                        </div>
+                        <h3>S1 Teknik Informatika (S.Kom)</h3>
+                        <h4>Universitas Sains dan Teknologi Indonesia (USTI)</h4>
+                        <ul class="timeline-achievements">
+                            <li>Lulus Sarjana Teknik Informatika dengan <strong>IPK 3,72 / 4,00</strong>.</li>
+                            <li>Mendalami rekayasa perangkat lunak, sistem informasi manajemen, basis data relasional, pemrograman web, dan aplikasi mobile.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Magang PTPN IV -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-badge">Pengalaman Industri</span>
+                            <span class="timeline-date">Agustus 2025 – September 2025</span>
+                        </div>
+                        <h3>Staf Teknologi Informasi (Magang)</h3>
+                        <h4>PT Perkebunan Nusantara IV Regional III</h4>
+                        <ul class="timeline-achievements">
+                            <li>Berkontribusi dalam pengembangan Sistem Informasi Manajemen Pembelian CPO & PK berbasis web untuk mendukung proses pencatatan, validasi, dan pengelolaan data.</li>
+                            <li>Mengembangkan lebih dari 6 modul utama meliputi Autentikasi Multi-Role, Dashboard Analitik, Validasi Formulir, Rekap Data, Manajemen Pembelian, dan Responsive UI.</li>
+                            <li>Menggunakan Laravel 10, PHP, Blade, Tailwind CSS, Flowbite, MySQL, serta berkontribusi pada pengujian, troubleshooting, dan dokumentasi sistem.</li>
+                            <li>Melakukan kolaborasi tim pengembang menggunakan Git & GitHub.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Bangkit Academy -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-badge">Studi Independen (MSIB)</span>
+                            <span class="timeline-date">2024</span>
+                        </div>
+                        <h3>Android Development Learner</h3>
+                        <h4>Bangkit Academy / MSIB – Yayasan Dicoding Indonesia</h4>
+                        <ul class="timeline-achievements">
+                            <li>Mempelajari pengembangan aplikasi Android Native menggunakan bahasa Kotlin sesuai standar industri.</li>
+                            <li>Mengimplementasikan perancangan UI/UX responsif, integrasi REST API (Retrofit), manajemen basis data lokal, serta penerapan best practice Git/GitHub.</li>
+                            <li>Menyelesaikan Capstone Project berbasis aplikasi mobile bersama tim lintas bidang.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. BEM USTI -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-badge">Organisasi</span>
+                            <span class="timeline-date">2024 – 2025</span>
+                        </div>
+                        <h3>Menteri Pemuda dan Olahraga</h3>
+                        <h4>Badan Eksekutif Mahasiswa (BEM) USTI</h4>
+                        <ul class="timeline-achievements">
+                            <li>Merencanakan, mengoordinasikan, dan mengevaluasi berbagai program kerja kemahasiswaan.</li>
+                            <li>Memimpin eksekusi kegiatan dan berkolaborasi dengan berbagai divisi untuk suksesnya agenda organisasi.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Proyek Unggulan Section -->
+        <section class="portofolio container fade-up-element" id="projects">
+            <div class="section-header">
+                <span class="section-tag">Proyek Unggulan</span>
+                <h2 class="section-title">Karya & <span>Studi Kasus Terbaik</span></h2>
+                <p class="section-subtitle">
+                    Daftar proyek perangkat lunak utama yang telah dikembangkan lengkap dengan permasalahan, solusi, dan repositori kode.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img-box">
+                        <div class="project-gradient-bg" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
+                            <i class="bx bx-purchase-tag-alt project-icon-preview"></i>
+                        </div>
+                        <span class="project-status-badge status-production">Production (Magang)</span>
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <div class="project-header-row">
+                                <h3 class="project-title">SIM Pembelian CPO & PK</h3>
+                            </div>
+                            <p class="project-desc">
+                                Sistem Informasi Manajemen berbasis web untuk pengolahan, pencatatan, dan rekapan data transaksi pembelian CPO & PK di PT Perkebunan Nusantara IV Regional III.
+                            </p>
+
+                            <div class="project-details-grid">
+                                <div class="detail-block">
+                                    <h5><i class="bx bx-error-circle"></i> Permasalahan</h5>
+                                    <p>Pencatatan dan verifikasi data transaksi pembelian minyak sawit (CPO & PK) membutuhkan sistem terpusat yang presisi dan aman dari kesalahan manual.</p>
+                                </div>
+                                <div class="detail-block">
+                                    <h5><i class="bx bx-check-circle"></i> Solusi & Fitur</h5>
+                                    <p>Mengembangkan web app Laravel dengan autentikasi multi-role, dashboard analitik data pembelian, validasi form, dan rekap data otomatis.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Laravel 10</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Flowbite</span>
+                            </div>
+                        </div>
+
+                        <div class="project-footer-row">
+                            <a href="https://github.com/Nabil17-alt/PTPN4Regional3" target="_blank" rel="noopener" class="project-link-btn">
+                                <i class="bx bxl-github"></i> Repository GitHub <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img-box">
+                        <div class="project-gradient-bg" style="background: linear-gradient(135deg, #4c1d95, #8b5cf6);">
+                            <i class="bx bxl-android project-icon-preview"></i>
+                        </div>
+                        <span class="project-status-badge status-completed">Completed (Bangkit)</span>
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <div class="project-header-row">
+                                <h3 class="project-title">INJUREAL – Mobile App</h3>
+                            </div>
+                            <p class="project-desc">
+                                Aplikasi mobile Android native yang dirancang untuk integrasi data cepat dan antarmuka pengguna yang responsif.
+                            </p>
+
+                            <div class="project-details-grid">
+                                <div class="detail-block">
+                                    <h5><i class="bx bx-error-circle"></i> Permasalahan</h5>
+                                    <p>Pengguna memerlukan aplikasi Android mobile yang dapat memuat data backend secara real-time dengan respons waktu rendah dan UI modern.</p>
+                                </div>
+                                <div class="detail-block">
+                                    <h5><i class="bx bx-check-circle"></i> Solusi & Fitur</h5>
+                                    <p>Mengimplementasikan arsitektur Android Kotlin Native, penanganan API asynchronous via Retrofit, dan penyimpanan lokal yang efisien.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Android Studio</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">Retrofit</span>
+                            </div>
+                        </div>
+
+                        <div class="project-footer-row">
+                            <a href="https://github.com/Nabil17-alt/INJUREAL" target="_blank" rel="noopener" class="project-link-btn">
+                                <i class="bx bxl-github"></i> Repository GitHub <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img-box">
+                        <div class="project-gradient-bg" style="background: linear-gradient(135deg, #065f46, #10b981);">
+                            <i class="bx bx-store-alt project-icon-preview"></i>
+                        </div>
+                        <span class="project-status-badge status-completed">Proyek Skripsi</span>
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <div class="project-header-row">
+                                <h3 class="project-title">Zimam Advertising – POS</h3>
+                            </div>
+                            <p class="project-desc">
+                                Sistem Point of Sales & Manajemen Pemesanan untuk mengelola penjualan, pesanan percetakan, dan stok barang secara terintegrasi.
+                            </p>
+
+                            <div class="project-details-grid">
+                                <div class="detail-block">
+                                    <h5><i class="bx bx-error-circle"></i> Permasalahan</h5>
+                                    <p>Manajemen operasional pemesanan iklan dan transaksi kasir percetakan membutuhkan otomasi pencatatan pesanan dan laporan stok.</p>
+                                </div>
+                                <div class="detail-block">
+                                    <h5><i class="bx bx-check-circle"></i> Solusi & Fitur</h5>
+                                    <p>Sistem POS kasir interaktif, manajemen item produk, histori transaksi, serta pelaporan keuangan terintegrasi basis data MySQL.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-tech-tags">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Blade</span>
+                            </div>
+                        </div>
+
+                        <div class="project-footer-row">
+                            <a href="https://github.com/Nabil17-alt/Skripsi-Muhammad-Nabil" target="_blank" rel="noopener" class="project-link-btn">
+                                <i class="bx bxl-github"></i> Repository GitHub <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic GitHub Repos Fetcher Container -->
+            <div id="github-projects-container" style="margin-top: 3rem;">
+                <div id="github-projects" class="projects-grid"></div>
+            </div>
+        </section>
+
+        <!-- 7. Sertifikasi Section -->
+        <section class="certifications container fade-up-element" id="certifications">
+            <div class="section-header">
+                <span class="section-tag">Kualifikasi</span>
+                <h2 class="section-title">Sertifikasi <span>Profesional</span></h2>
+                <p class="section-subtitle">
+                    Sertifikat keahlian resmi yang diterbitkan oleh platform edukasi teknologi terkemuka.
+                </p>
+            </div>
+
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-icon-box"><i class="bx bxl-android"></i></div>
+                    <div class="cert-info">
+                        <h4>Android Intermediate</h4>
+                        <div class="cert-issuer">Dicoding Indonesia</div>
+                        <div class="cert-year">Tahun 2025</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon-box"><i class="bx bx-mobile-alt"></i></div>
+                    <div class="cert-info">
+                        <h4>Fundamental Aplikasi Android</h4>
+                        <div class="cert-issuer">Dicoding Indonesia</div>
+                        <div class="cert-year">Tahun 2024</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon-box"><i class="bx bx-code-block"></i></div>
+                    <div class="cert-info">
+                        <h4>Pemrograman Kotlin</h4>
+                        <div class="cert-issuer">Dicoding Indonesia</div>
+                        <div class="cert-year">Tahun 2024</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon-box"><i class="bx bxl-git"></i></div>
+                    <div class="cert-info">
+                        <h4>Dasar Git dengan GitHub</h4>
+                        <div class="cert-issuer">Dicoding Indonesia</div>
+                        <div class="cert-year">Tahun 2024</div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon-box"><i class="bx bxl-java"></i></div>
+                    <div class="cert-info">
+                        <h4>Java Fundamentals</h4>
+                        <div class="cert-issuer">Oracle Academy</div>
+                        <div class="cert-year">Tahun 2023</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Statistik Section -->
+        <section class="stats-section fade-up-element" id="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="3.72">3.72</div>
+                        <div class="stat-label">IPK Transkrip S1</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="1">1</div>
+                        <div class="stat-label">Pengalaman Industri</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="3">3+</div>
+                        <div class="stat-label">Proyek Utama</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number" data-target="5">5</div>
+                        <div class="stat-label">Sertifikasi Profesional</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Kontak Section -->
+        <section class="contact container fade-up-element" id="contact">
+            <div class="section-header">
+                <span class="section-tag">Hubungi Saya</span>
+                <h2 class="section-title">Mari Berdiskusi & <span>Berkolaborasi</span></h2>
+                <p class="section-subtitle">
+                    Terbuka untuk kesempatan karir Full-Time, proyek perancangan perangkat lunak, maupun diskusi teknologi.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-column">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="bx bx-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email Resmi</h4>
+                            <p><a href="mailto:realmuhammadnabil@gmail.com">realmuhammadnabil@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="bx bx-phone-call"></i></div>
+                        <div class="contact-details">
+                            <h4>WhatsApp / Telepon</h4>
+                            <p><a href="https://wa.me/6282286923525" target="_blank" rel="noopener">0822-8692-3525</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="bx bx-map"></i></div>
+                        <div class="contact-details">
+                            <h4>Lokasi Dominan</h4>
+                            <p>Pekanbaru, Riau, Indonesia 28294</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="bx bxl-linkedin-square"></i></div>
+                        <div class="contact-details">
+                            <h4>Profil LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/muhammad-nabil-377629272/" target="_blank" rel="noopener">linkedin.com/in/muhammad-nabil</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="form-name">Nama Lengkap</label>
+                            <input type="text" id="form-name" name="name" class="form-input" placeholder="Masukkan nama Anda..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Alamat Email</label>
+                            <input type="email" id="form-email" name="email" class="form-input" placeholder="nama@perusahaan.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Pesan / Diskusi Proyek</label>
+                            <textarea id="form-message" name="message" class="form-textarea" placeholder="Tuliskan detail pesan Anda di sini..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Kirim Pesan <i class="bx bx-paper-plane"></i>
+                        </button>
+                    </form>
+
+                    <!-- Terminal Database Log Local Storage -->
+                    <div class="contact-log-section">
+                        <div class="contact-log-header" id="contact-log-toggle">
+                            <h4><i class="bx bx-terminal"></i> Database Log Pesan Lokal</h4>
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <div class="contact-log-content" id="contact-log-box">
+                            <div class="contact-log-list" id="contact-log-list">
+                                <!-- Dynamic content -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 10. Footer Section -->
     <footer>
         <div class="container footer-content">
-            <div class="footer-logo"><span>Nabil</span>.Dev</div>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#timeline">Journey</a>
-                <a href="#portofolio">Projects</a>
-                <a href="#contact">Contact</a>
+            <a href="#home" class="logo"><span>Nabil</span>.Dev</a>
+            <div class="footer-nav">
+                <a href="#home">Beranda</a>
+                <a href="#about">Tentang</a>
+                <a href="#summary">Ringkasan</a>
+                <a href="#skills">Keahlian</a>
+                <a href="#experience">Pengalaman</a>
+                <a href="#projects">Proyek</a>
+                <a href="#certifications">Sertifikasi</a>
+                <a href="#contact">Kontak</a>
             </div>
-            <p class="copyright">&copy; <span id="current-year"></span> Muhammad Nabil. All rights reserved.</p>
+            <p class="copyright">
+                &copy; <span id="current-year"></span> Muhammad Nabil. Hak Cipta Dilindungi.
+            </p>
         </div>
     </footer>
 
-    <!-- App Logic Script -->
+    <!-- Application Script -->
     <script src="index.js"></script>
 </body>
 
