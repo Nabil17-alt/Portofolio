@@ -3,7 +3,7 @@
 ![Muhammad Nabil Portfolio](./pages/img/Muhammad_Nabil.png)
 
 > **Software Engineer | Laravel Developer | Android Developer**  
-> Lulusan S1 Teknik Informatika Universitas Sains dan Teknologi Indonesia (USTI) — IPK 3.72 / 4.00.
+> Lulusan S1 Teknik Informatika Universitas Sains dan Teknologi Indonesia (USTI) — IPK 3.71 / 4.00.
 
 ## 🚀 Fitur Website
 - **10 Seksi Lengkap**: Beranda, Tentang Saya, Ringkasan Profesional, Keahlian, Pengalaman, Proyek Unggulan, Sertifikasi, Statistik, Kontak, & Footer.
@@ -18,7 +18,7 @@
 
 ## 📬 Kontak
 - **Email**: [realmuhammadnabil@gmail.com](mailto:realmuhammadnabil@gmail.com)
-- **WhatsApp**: [0822-8692-3525](https://wa.me/6282286923525)
+- **WhatsApp**: [0851-2441-1619](https://wa.me/6282286923525)
 - **LinkedIn**: [linkedin.com/in/muhammad-nabil-377629272](https://www.linkedin.com/in/muhammad-nabil-377629272/)
 - **GitHub**: [github.com/Nabil17-alt](https://github.com/Nabil17-alt)
 
